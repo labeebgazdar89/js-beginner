@@ -61,3 +61,23 @@ for (const key in programming) {
     console.log(key) // it provides keys
     console.log(programming[key])
 }
+
+
+// For Each
+
+// const myArr1 = ["language1","language2","language3","language4"]
+// myArr1.forEach(function(item) {
+//     console.log(item)
+// })
+
+
+const myArr1 = ["language1","language2","language3","language4"]
+myArr1.forEach((item) => {
+    console.log(item)
+})
+
+function printMe(item){
+    console.log(item)
+}
+myArr1.forEach(printMe()) // undefined is not a function
+myArr1.forEach(printMe)
