@@ -254,7 +254,6 @@ console.log(newNums5)
 
 
 //Reduce Method
-//by default init value first element hoti hai
 const myNums6 = [10,3,4];
 const initialValue = 0;
 const total = myNums6.reduce(function(accumulator, currentValue){
@@ -290,5 +289,5 @@ const shoppingCart = [
 
 const cartTotal = shoppingCart.reduce((accumulator, cousre) => {
     return accumulator + cousre.price
-}, initialValue)
+},initialValue)
 console.log(cartTotal)
