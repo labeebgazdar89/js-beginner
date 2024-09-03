@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two </li>
+        <li>Three</li>
+    </ul>
+    <script>
+        document.querySelector('.list').addEventListener('click', function(e) {
+    console.log(e)
+}, false)
+//Events types to remember
+//type, timestamp, defaultPrevent
+//target, toElement, srcElement, currentTarget
+//clientX, clientY, screenX, screenY
+//altkey, ctrlkey, shiftkey, keycode
+
+// Event bubbling is event occurs from child to parent
+//matlab agr parent or child dono pr events hain to
+// pehle child event occur hoga phir parent hoga
+
+//Event Capturing
+//true main event parent to child propogate hota hai
+document.querySelector('.list').addEventListener('click', function(e) {
+    console.log(e)
+    e.stopPropagation(); //ye event bubbling rok deta hai
+}, true)
+
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- //document.querySelector('.list').addEventListener('click', function(e) {
+    console.log(e)
+}, false) -->
+
