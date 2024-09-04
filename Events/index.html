@@ -32,6 +32,18 @@ document.querySelector('.list').addEventListener('click', function(e) {
     e.stopPropagation(); //ye event bubbling rok deta hai
 }, true)
 
+document.querySelector('.images').addEventListener('click', function(e){
+    // console.log(e.target)
+    // console.log(e.target.parentNode)
+    console.log(e.target.tagName)
+    if(e.target.tagName === 'H1'){
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode
+    removeIt.remove()
+    }
+    
+}, false)
+
 
     </script>
 </body>
