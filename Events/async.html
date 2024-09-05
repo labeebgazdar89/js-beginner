@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <button id="stop">Stop</button>
+    
+    <script>
+
+console.log("Gazdar")
+function printName(){
+    console.log("Labeeb")
+    }
+setTimeout(printName, 0)
+//Output
+//Gazdar
+//Labeeb
+
+
+//clearTimeout() k lye reference lena hota hai
+// const timeoutRef = setTimeout(printName, 0)
+clearTimeout(timeoutRef)
+
+//ksi button pr setTimeout() ka reference is tarah laga sakte hai
+const timeoutRef = setTimeout(printName, 3000)
+document.querySelector('#stop').addEventListener('click', function(e) {
+    clearTimeout(timeoutRef)
+})
+
+
+const intervalId = setInterval(function(){
+    console.log(Date.now())
+}, 1000)
+
+//clear Interval is tarah karte hain
+const intervalId1 = setInterval(function(){
+    console.log(Date.now())
+}, 1000)
+clearInterval(intervalId1)
+
+    </script>
+</body>
+</html>
